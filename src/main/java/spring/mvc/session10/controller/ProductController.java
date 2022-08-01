@@ -52,7 +52,6 @@ public class ProductController {
 		return "redirect:addOk";
 	}
 
-	// 新增商品 - 2nd 寫法
 	// 成功
 	@GetMapping(value = { "/addOk", "/updateOk" })
 	public String success() {
