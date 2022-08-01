@@ -52,9 +52,16 @@
 										class="pure-button pure-button-primary">Update</button>
 								</td>
 								<td>
+									<!-- 刪除商品 - 1st 寫法 -->
+									<!-- 
 									<button type="button"
 										onclick="window.location.href='/spring.mvc/mvc/product/delete/${ status.index }';"
-										class="pure-button pure-button-primary">刪除</button>
+										class="pure-button pure-button-primary">Delete</button>
+									 -->
+									 <!-- 刪除商品 - 2nd 寫法 -->
+									 <button type="button" 
+										onclick="window.location.href='/spring.mvc/mvc/product/${ status.index }?delete=true';"
+										class="pure-button pure-button-primary">delete</button>
 								</td>
 						</tr>
 						</c:forEach>
