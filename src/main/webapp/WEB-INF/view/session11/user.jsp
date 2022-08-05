@@ -44,5 +44,10 @@
 		
 		
 	</spform:form>
+	
+	<!-- User list -->
+	${ users }
+	
+	
 </body>
 </html>
