@@ -46,7 +46,55 @@
 	</spform:form>
 	
 	<!-- User list -->
-	${ users }
+	<form class = "pure-form">
+		<fieldset>
+			<legend>User List</legend>
+			<table class = "pure-table pure-table-bordered">
+				<thead>
+					<tr>
+						<th>index</th><th>姓名</th><th>年齡</th><th>生日</th><th>學歷</th><th>學歷</th>
+						<th>性別</th><th>興趣</th><th>履歷</th><th>編輯</th><th>刪除</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach varchar="status" var="user" items="${ users }" >
+						<tr>
+							<td>${ status.index }</td>
+							<td>${ user.name }</td>
+							<td>${ user.age }</td>
+							<td>${ user.birth }</td>
+							<td>${ user.education }</td>
+							<td>${ user.sex }</td>
+							<td>${ user.interest }</td>
+							<td>${ user.resume }</td>
+							<td><a href="javascript:editUser(${ status.index })">編輯</a></td>
+							<td><a href="javascript:deleteUser(${ status.index })">刪除</a></td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		</fieldset>
+	</form>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 </body>
