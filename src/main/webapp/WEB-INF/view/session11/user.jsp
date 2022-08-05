@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="spform" uri="http://www.springframework.org/tags/form" %>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css"> 
+	<meta charset="UTF-8">
+	<title>User page</title>
+</head>
+<body style="padding: 15px;">
+	<spform:form class="pure-form"
+				 method="post"
+				 modelAttribute="user"	
+				 action="${ pageContext.request.contextPath }/mvc/user/">
+		
+		<fieldset>
+			<legend>User Form</legend>
+			姓名: <spform:input path="name" /><p />
+			年齡: <spform:input path="age" type="number" /><p />
+			生日: <spform:input path="birth" type="date" /><p />
+			學歷: <spform:select path="education">
+					<spform:option value="">請選擇</spform:option>
+					<spform:option value="國中">國中</spform:option>
+					<spform:option value="高中職">高中職</spform:option>
+					<spform:option value="大學">大學</spform:option>
+					<spform:option value="研究所">研究所</spform:option>
+				 </spform:select><p />
+			性別: <spform:radiobutton path="sex" value="男" />男
+				 <spform:radiobutton path="sex" value="女" />女<p />
+			興趣: <spform:checkbox path="interest" value="爬山" />爬山 
+				 <spform:checkbox path="interest" value="看電影" />看電影
+				 <spform:checkbox path="interest" value="寫程式" />寫程式
+				 <spform:checkbox path="interest" value="飛控" />飛控<p />
+			履歷: <spform:input path="resume" /><p />
+			<input type="hidden" id="_method" name="_method" value="${ _method }">
+			<button type="submit" class="pure-button pure-button-primary">${ submitButtonName }</button>
+		</fieldset>
+		
+		
+	</spform:form>
+</body>
+</html>
