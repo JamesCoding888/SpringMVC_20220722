@@ -16,11 +16,23 @@ public class User {
 	private String resume;
 	
 	
-	@Override
-	public String toString() {
-		return "User [name=" + name + ", age=" + age + ", birth=" + birth + ", education=" + education + ", sex=" + sex
-				+ ", interest=" + Arrays.toString(interest) + ", resume=" + resume + "]";
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
+	
+	public User(String name, Integer age, Date birth, String education, String sex, String[] interest, String resume) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.birth = birth;
+		this.education = education;
+		this.sex = sex;
+		this.interest = interest;
+		this.resume = resume;
+	}
+
+	
 	public String getName() {
 		return name;
 	}
@@ -51,8 +63,12 @@ public class User {
 	public void setSex(String sex) {
 		this.sex = sex;
 	}
+
 	public String[] getInterest() {
 		return interest;
+	}
+	public String getInterestToString() {
+		return interest == null ? "" : Arrays.toString(interest);
 	}
 	public void setInterest(String[] interest) {
 		this.interest = interest;
@@ -64,5 +80,10 @@ public class User {
 		this.resume = resume;
 	}
 	
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", age=" + age + ", birth=" + birth + ", education=" + education + ", sex=" + sex
+				+ ", interest=" + Arrays.toString(interest) + ", resume=" + resume + "]";
+	}
 	
 }
