@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
 import spring.mvc.session11.entity.User;
 
 @Controller
@@ -62,6 +64,7 @@ public class UserController {
 		users.set(index, user);
 		return "redirect:./";
 	}
+
 	@DeleteMapping("/{index}")
 	public String delete(@PathVariable("index") int index) {
 		users.remove(index);
