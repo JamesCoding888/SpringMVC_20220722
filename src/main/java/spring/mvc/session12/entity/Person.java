@@ -7,19 +7,19 @@ import org.hibernate.validator.constraints.Range;
 import org.springframework.format.annotation.DateTimeFormat;
 import com.fasterxml.jackson.annotation.JsonFormat;
 public class Person {
-	@NotNull(message = "Naming shall NOT be Null")
-	@Size(min=2, max=50, message="The length of name between 2 ~ 50")
+	@NotNull(message = "{person.name.notEmpty}")
+	@Size(min=2, max=50, message="{person.name.size}")
 	private String name; 			  // name
 	
-	@NotNull(message="Age shall NOT be Null")
-	@Range(min=18, max=99, message = "The range of age between 18 ~ 99 ")
+	@NotNull(message="{person.age.notNull}")
+	@Range(min=18, max=99, message = "{person.age.range}")
 	private Integer age; 			  // age
 	
-	@NotNull(message="Member shall NOT be Null")
+	@NotNull(message="{person.member.notNull}")
 	private Boolean member;  // whether is member or not
 	
-	@NotNull(message="Birthday shall NOT be Null")
-	@Past(message = "The date of birthday shall NOT be over the current date")
+	@NotNull(message="{person.birth.notNull}")
+	@Past(message = "{person.birth.past}")
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date birth; 				  // birthday
