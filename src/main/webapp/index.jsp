@@ -26,6 +26,10 @@
 			Session 12  Person Lab <br>
 			<a href="${ pageContext.request.contextPath }/mvc/person/">/spring.mvc/mvc/person/</a>
 		</li>
+		<li>
+			Session 12  Mystock Lab <br>
+			<a href="${ pageContext.request.contextPath }/mvc/mystock/">/spring.mvc/mvc/mystock/</a>
+		</li>
 	</ol>
 </body>
 </html>
