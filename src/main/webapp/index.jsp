@@ -22,6 +22,10 @@
 			Session 11 User Lab <br>
 			<a href="/spring.mvc/mvc/user/">/spring.mvc/mvc/user/</a>
 		</li>
+		<li>
+			Session 12  Person Lab <br>
+			<a href="${ pageContext.request.contextPath }/mvc/person/">/spring.mvc/mvc/person/</a>
+		</li>
 	</ol>
 </body>
 </html>

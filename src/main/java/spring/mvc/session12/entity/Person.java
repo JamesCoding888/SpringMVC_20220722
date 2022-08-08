@@ -8,18 +8,18 @@ import org.springframework.format.annotation.DateTimeFormat;
 import com.fasterxml.jackson.annotation.JsonFormat;
 public class Person {
 	@NotNull(message = "Naming shall NOT be Null")
-	@Size(min=2, max=50, message="The range of name between 2 ~ 50")
+	@Size(min=2, max=50, message="The length of name between 2 ~ 50")
 	private String name; 			  // name
 	
-	@NotNull(message="age shall NOT be Null")
+	@NotNull(message="Age shall NOT be Null")
 	@Range(min=18, max=99, message = "The range of age between 18 ~ 99 ")
 	private Integer age; 			  // age
 	
-	@NotNull(message="member shall NOT be Null")
+	@NotNull(message="Member shall NOT be Null")
 	private Boolean member;  // whether is member or not
 	
-	@NotNull(message="birthday shall NOT be Null")
-	@Past(message = "the date of birthday shall NOT be over the current date")
+	@NotNull(message="Birthday shall NOT be Null")
+	@Past(message = "The date of birthday shall NOT be over the current date")
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date birth; 				  // birthday
