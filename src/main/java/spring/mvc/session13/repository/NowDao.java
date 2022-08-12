@@ -4,10 +4,13 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 @Repository
-class NowDao {
+public class NowDao {
+	
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
+	
 	public String now() {
 		return jdbcTemplate.queryForObject("select NOW() as now", String.class);
 	}
+	
 }
