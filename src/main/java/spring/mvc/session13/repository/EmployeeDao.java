@@ -25,7 +25,7 @@ public interface EmployeeDao {
 	// 不分頁的查詢
 	List<Employee> query();
 	
-	// 分頁查詢 (判斷 HttpSession 值，決定是分頁狀態)
+	// 分頁查詢 (判斷 HttpSession 值，決定分頁狀態)
 	List<Employee> query(Object httpSessionValue);
 	
 	// 分頁查詢
