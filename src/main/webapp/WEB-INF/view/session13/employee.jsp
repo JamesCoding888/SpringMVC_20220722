@@ -19,13 +19,11 @@
 		}
 	</style>
 	<script type="text/javascript">
-		function changeMethodAndSubmit(methodValue){
+		function changeMethodAndSubmit(methodValue) {
 			document.getElementById("_method").value = methodValue;
 			document.getElementById("employee").submit();
-			
 		}
 	</script>
-	
 </head>
 <body style="padding: 15px;">
 
@@ -38,7 +36,11 @@
 					modelAttribute="employee"
 					action="${ pageContext.request.contextPath }/mvc/jdbc/employee/">
 					<fieldset>
-						<legend>Employee Form</legend>
+						<legend>
+							<b>Employee Form</b>
+							&nbsp;|&nbsp; 
+							<a href="${ pageContext.request.contextPath }/mvc/jdbc/job/">Job Form</a>
+						</legend>
 						<input type="hidden" id="_method" name="_method" value="${ _method }" />
 						編號: <spform:input path="eid" readonly="true" /><p />
 						姓名: <spform:input path="ename" /><br />
@@ -51,12 +53,10 @@
 						<button type="submit" ${ _method eq 'PUT'?'':'disabled' } class="pure-button pure-button-primary">
 							修改
 						</button>
-						<button type="submit" ${ _method eq 'PUT'?'':'disabled' } class="pure-button pure-button-primary"
-										onclick="changeMethodAndSubmit('DELETE')">
+						<button type="button" ${ _method eq 'PUT'?'':'disabled' } class="pure-button pure-button-primary"
+								onclick="changeMethodAndSubmit('DELETE')">
 							刪除
 						</button>
-						
-						
 						<p />
 						<spform:errors path="*" cssClass="error" />
 					</fieldset>

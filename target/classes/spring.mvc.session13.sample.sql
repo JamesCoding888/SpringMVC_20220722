@@ -56,3 +56,8 @@ select j.jid, j.jname, j.eid,
 from job j left join employee e on j.eid = e.eid;
 
 
+-- 透過 offset 來做分頁
+select * from job limit 5 offset 0; -- offset 0 從第 1 頁開始處理
+select * from job limit 5 offset 5; -- offset 5 從第 6 頁開始處理
+
+
