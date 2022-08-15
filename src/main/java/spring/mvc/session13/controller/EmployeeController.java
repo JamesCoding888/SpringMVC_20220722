@@ -5,10 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import spring.mvc.session13.entity.Employee;
@@ -44,6 +46,23 @@ public class EmployeeController {
 			return "session13/employee";
 		}
 		employeeDao.add(employee);
+		return "redirect:./";
+	}
+	
+	@PutMapping("/")
+	public String update(@Valid Employee employee, BindingResult result, Model model) {
+		if(result.hasErrors()) {
+			model.addAttribute("_method", "PUT");
+			model.addAttribute("employees", employeeDao.query());
+			model.addAttribute("employee", employee);
+			return "session13/employee";
+		}
+		employeeDao.update(employee);
+		return "redirect:./";
+	}
+	@DeleteMapping("/")
+	public String delete(Employee employee) {
+		employeeDao.delete(employee.getEid());
 		return "redirect:./";
 	}
 	
