@@ -34,6 +34,10 @@
 			Session 13  Now <br>
 			<a href="${ pageContext.request.contextPath }/mvc/jdbc/now/">/spring.mvc/mvc/jdbc/now/</a>
 		</li>
+		<li>
+			Session 14  Div (例外處理)<br>
+			<a href="${ pageContext.request.contextPath }/mvc/session14/div/">/spring.mvc/mvc/session14/div/</a>
+		</li>
 	</ol>
 </body>
 </html>
