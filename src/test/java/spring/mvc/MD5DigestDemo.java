@@ -20,26 +20,26 @@ public class MD5DigestDemo {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		// Encryment (private key)
-		String input = "1234";
-		String output = getEncryptString(input);
+		// 加密 (encrypment)
+		String input = "1234"; 
+		// salt
+		String salt = "abc";
+		String output = getEncryptString(input + salt);
 		System.out.println("資料庫密碼欄位存放: " + output);
-
+		
 		// 登入
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("請輸入密碼: ");
+		System.out.print("請輸入密碼: ");
 		String pwd = scanner.next();
+		pwd = pwd + "abc";
 		String pwdMD5 = getEncryptString(pwd);
 		System.out.println("使用者所輸入的密碼加密後的結果: " + pwdMD5);
-		
+
 		// 比對
-		if(output.equals(pwdMD5)) {
+		if (output.equals(pwdMD5)) {
 			System.out.println("登入成功");
 		} else {
 			System.out.println("登入失敗");
 		}
-		
-		
-		
 	}
 }

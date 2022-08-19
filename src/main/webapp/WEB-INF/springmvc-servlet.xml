@@ -78,8 +78,10 @@
 		<!-- basic -->
 		<property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
 		<property name="jdbcUrl" value="jdbc:mysql://localhost:****/web2_springmvc?serverTimezone=Asia/Taipei&amp;characterEncoding=utf-8&amp;useUnicode=true" />
-		<property name="user" value="****" />
-		<property name="password" value="**********" />
+		<property name="user" value="***" />
+		<property name="password" value="**************" />
+
+
 		
 		<!-- options -->
 		<property name="minPoolSize" value="10" />
