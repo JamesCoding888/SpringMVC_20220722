@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xmlns:aop="http://www.springframework.org/schema/aop"
-		xmlns:c="http://www.springframework.org/schema/c"
-		xmlns:cache="http://www.springframework.org/schema/cache"
-		xmlns:context="http://www.springframework.org/schema/context"
-		xmlns:jdbc="http://www.springframework.org/schema/jdbc"
-		xmlns:jee="http://www.springframework.org/schema/jee"
-		xmlns:lang="http://www.springframework.org/schema/lang"
-		xmlns:mvc="http://www.springframework.org/schema/mvc"
-		xmlns:p="http://www.springframework.org/schema/p"
-		xmlns:task="http://www.springframework.org/schema/task"
-		xmlns:tx="http://www.springframework.org/schema/tx"
-		xmlns:util="http://www.springframework.org/schema/util"
-		xmlns:websocket="http://www.springframework.org/schema/websocket"
-		xmlns:jpa="http://www.springframework.org/schema/data/jpa"
-		xsi:schemaLocation="http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.3.xsd
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:websocket="http://www.springframework.org/schema/websocket"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.3.xsd
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
@@ -127,7 +127,7 @@
 		<!-- 3 定義 entity 掃描區 -->
 		<property name="packagesToScan">
 			<list>
-				<value>spring.mvc.session15</value>
+				<value>spring.mvc</value>
 			</list>
 		</property>
 		
@@ -144,7 +144,7 @@
 	</bean>
 	
 	<!-- 5. 配置 Spring Data Jpa, base-package: 掃描 Repository Bean 所在的 package -->
-	<jpa:repositories base-package="spring.mvc.session15"
+	<jpa:repositories base-package="spring.mvc"
 		entity-manager-factory-ref="entityManagerFactory"
 		transaction-manager-ref="transactionManager" />
 		
