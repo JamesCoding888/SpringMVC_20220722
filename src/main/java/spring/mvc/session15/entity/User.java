@@ -1,5 +1,5 @@
 package spring.mvc.session15.entity;
-import java.util.Date;
+import java.util.Date; 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,7 +12,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
-@Table(name = "user")
+@Table(name = "user1")
 public class User {
 	
 	@Id
